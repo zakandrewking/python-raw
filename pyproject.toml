@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = ["fastapi[standard]>=0.116.1", "polars>=1.32.3"]
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+    "nicegui>=2.23.3",
+]
 
 [dependency-groups]
 dev = ["ruff>=0.12.11", "ty>=0.0.1a19"]
