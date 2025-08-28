@@ -1,10 +1,9 @@
 version = 1
 revision = 3
 requires-python = ">=3.13"
-resolution-markers = [
-    "python_full_version >= '3.14'",
-    "python_full_version < '3.14'",
-]
+
+[manifest]
+requirements = [{ name = "polars" }]
 
 [[package]]
 name = "polars"
@@ -19,14 +18,3 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/d7/c8/226953cda6cf9ae63aa9714d396a9138029e31db3c504c15d6711b618f8f/polars-1.32.3-cp39-abi3-win_amd64.whl", hash = "sha256:db56a7cb4898e173d62634e182f74bdff744c62be5470e0fe20df8d10f659af7", size = 38038192, upload-time = "2025-08-14T17:27:15.993Z" },
     { url = "https://files.pythonhosted.org/packages/ec/99/6b93c854e602927a778eabd7550204f700cc4e6c07be73372371583dda3e/polars-1.32.3-cp39-abi3-win_arm64.whl", hash = "sha256:a2e3f87c60f54eefe67b1bebd3105918d84df0fd6d59cc6b870c2f16d2d26ca1", size = 34198919, upload-time = "2025-08-14T17:27:21.423Z" },
 ]
-
-[[package]]
-name = "python-raw"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "polars" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "polars", specifier = ">=1.32.3" }]
