@@ -27,9 +27,42 @@ def ui_page():
     ui.label("Carbon capture methods")
     columns = [
         {"name": "method", "label": "Method", "field": "method", "sortable": True},
-        {"name": "approach", "label": "Approach", "field": "approach", "sortable": True},
-        {"name": "maturity", "label": "Maturity", "field": "maturity", "sortable": True},
-        {"name": "storage", "label": "Storage/Use", "field": "storage", "sortable": True},
+        {
+            "name": "approach",
+            "label": "Approach",
+            "field": "approach",
+            "sortable": True,
+        },
+        {
+            "name": "maturity",
+            "label": "Maturity",
+            "field": "maturity",
+            "sortable": True,
+        },
+        {
+            "name": "storage",
+            "label": "Storage/Use",
+            "field": "storage",
+            "sortable": True,
+        },
+        {
+            "name": "impact_2025",
+            "label": "Impact 2025 (MtCO2/yr)",
+            "field": "impact_2025",
+            "sortable": True,
+        },
+        {
+            "name": "impact_2030",
+            "label": "Impact 2030 (MtCO2/yr)",
+            "field": "impact_2030",
+            "sortable": True,
+        },
+        {
+            "name": "impact_2050",
+            "label": "Impact 2050 (MtCO2/yr)",
+            "field": "impact_2050",
+            "sortable": True,
+        },
     ]
     rows = [
         {
@@ -38,6 +71,9 @@ def ui_page():
             "approach": "Amine solvent absorption from flue gas",
             "maturity": "Commercial",
             "storage": "Geologic storage; EOR",
+            "impact_2025": None,
+            "impact_2030": None,
+            "impact_2050": None,
         },
         {
             "id": 2,
@@ -45,6 +81,9 @@ def ui_page():
             "approach": "Shift syngas to CO2 + H2; capture CO2",
             "maturity": "Commercial (industrial)",
             "storage": "Geologic storage",
+            "impact_2025": None,
+            "impact_2030": None,
+            "impact_2050": None,
         },
         {
             "id": 3,
@@ -52,6 +91,9 @@ def ui_page():
             "approach": "Burn in O2 to produce concentrated CO2",
             "maturity": "Pilot/Demo",
             "storage": "Geologic storage",
+            "impact_2025": None,
+            "impact_2030": None,
+            "impact_2050": None,
         },
         {
             "id": 4,
@@ -59,6 +101,9 @@ def ui_page():
             "approach": "Solid/liquid sorbent capture from ambient air",
             "maturity": "Early commercial",
             "storage": "Geologic storage; utilization",
+            "impact_2025": None,
+            "impact_2030": None,
+            "impact_2050": None,
         },
         {
             "id": 5,
@@ -66,6 +111,9 @@ def ui_page():
             "approach": "Capture CO2 from biomass energy/fermentation",
             "maturity": "Pilot/Early",
             "storage": "Geologic storage",
+            "impact_2025": None,
+            "impact_2030": None,
+            "impact_2050": None,
         },
         {
             "id": 6,
@@ -73,6 +121,9 @@ def ui_page():
             "approach": "React CO2 with minerals or concrete",
             "maturity": "Pilot/Early",
             "storage": "Solid carbonates (in/ex-situ)",
+            "impact_2025": None,
+            "impact_2030": None,
+            "impact_2050": None,
         },
         {
             "id": 7,
@@ -80,6 +131,9 @@ def ui_page():
             "approach": "Increase seawater alkalinity to draw down CO2",
             "maturity": "Research/Pilot",
             "storage": "Dissolved bicarbonate/carbonate",
+            "impact_2025": None,
+            "impact_2030": None,
+            "impact_2050": None,
         },
         {
             "id": 8,
@@ -87,6 +141,9 @@ def ui_page():
             "approach": "Land management to increase soil carbon",
             "maturity": "Mature (MRV evolving)",
             "storage": "Soil organic carbon",
+            "impact_2025": None,
+            "impact_2030": None,
+            "impact_2050": None,
         },
         {
             "id": 9,
@@ -94,6 +151,9 @@ def ui_page():
             "approach": "Biological CO2 uptake via biomass growth",
             "maturity": "Mature",
             "storage": "Biomass/soils",
+            "impact_2025": None,
+            "impact_2030": None,
+            "impact_2050": None,
         },
     ]
     ui.table(columns=columns, rows=rows, row_key="id")
