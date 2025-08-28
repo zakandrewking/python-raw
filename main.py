@@ -18,10 +18,9 @@ async def read_item(item_id: int, q: Union[str, None] = None):
 
 @ui.page("/")
 def ui_page():
-    dark = ui.dark_mode()
+    dark = ui.dark_mode(value=None)
     with ui.header().classes("items-center justify-between"):
         ui.label("Carbon capture")
-        ui.button(on_click=dark.toggle, icon="dark_mode").props("flat color=white")
     ui.label("Hello, NiceGUI!")
     with ui.row():
         ui.link("Open item 123", "/items/123?q=foo")
