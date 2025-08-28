@@ -27,9 +27,9 @@ def ui_page():
     ui.label("Carbon capture methods")
     columns = [
         {"name": "method", "label": "Method", "field": "method", "sortable": True},
-        {"name": "approach", "label": "Approach", "field": "approach"},
-        {"name": "maturity", "label": "Maturity", "field": "maturity"},
-        {"name": "storage", "label": "Storage/Use", "field": "storage"},
+        {"name": "approach", "label": "Approach", "field": "approach", "sortable": True},
+        {"name": "maturity", "label": "Maturity", "field": "maturity", "sortable": True},
+        {"name": "storage", "label": "Storage/Use", "field": "storage", "sortable": True},
     ]
     rows = [
         {
